@@ -1,0 +1,17 @@
+[project]
+name = "hello-world"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "chainlit>=2.8.3",
+    "lancedb>=0.25.2",
+    "langchain-community>=0.4",
+    "langchain[openai]>=1.0.0",
+]
+
+[dependency-groups]
+dev = [
+    "duckdb>=1.4.1",
+]
