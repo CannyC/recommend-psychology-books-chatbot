@@ -1,6 +1,8 @@
+import os
+
 import chainlit as cl
-from langchain_openai import ChatOpenAI
 from langchain.agents import create_agent
+from langchain_openai import ChatOpenAI
 
 from tool_book_recommender_async import search_books
 
@@ -55,7 +57,8 @@ def extract_final_ai_content(messages):
 
 @cl.password_auth_callback
 async def auth_callback(username: str, password: str):
-    if (username, password) == ("cansu", "cansu"):
+    correct_password = os.getenv("PASSWORD", "cansu")
+    if (username, password) == ("cansu", correct_password):
         return cl.User(
             identifier="cansu", metadata={"role": "cansu", "provider": "credentials"}
         )

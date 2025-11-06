@@ -61,13 +61,7 @@ uv sync --locked
 1. Set the `OPENAI_API_KEY` environment variable
 2. Create a JWT secret with `chainlit create-secret` and set it as an environment variable
 3. Run `chainlit run main.py`
-4. Open `http://localhost:8000` and log in with username `cansu` and password `cansu`
-
-#### Online
-
-The bot is deployed at: [https://cansurag.up.railway.app/](https://cansurag.up.railway.app/)
-
-Login with username `cansu` and password `cansu`.
+4. Open `http://localhost:8000` and log in
 
 ## Possible Next Steps
 
